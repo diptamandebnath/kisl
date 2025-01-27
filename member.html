@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0452ac;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    border: 3px solid #e97305;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 265px;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+.role {
+    font-weight: bold;
+    color: #3498db;
+    margin-top: 5px;
+}
+
+.bio {
+    color: #7f8c8d;
+    font-size: 1em;
+    margin-top: 10px;
+}
+nav {
+      color: #2804f3;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style:georgian;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #021a68;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #bb07a3;
+    }
+    
+
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#learn">Learn</a></li>
+          <li><a href="#about-project">About Project</a></li>
+          <li><a href="#">Team Member</a></li>
+          <li><a href="#news-updates">News/Updates</a></li>
+          <li><a href="#reference-website">Reference Website</a></li>
+        </ul>
+      </nav>
+    <header>
+
+        <h1>Meet Our Team</h1>
+        <p>Our dedicated team is committed to driving success through innovation and expertise.</p>
+    </header>
+    <section class="team">
+        <div class="team-member">
+            <img src="https://k-isl.com/SM.jpeg" alt="John Doe">
+            <h2>Prof. Swanirbhar Majumder</h2>
+            <p class="role">PI, HOD Dept of IT, TU</p>
+            <p class="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, repellat</p>
+        </div>
+        <div class="team-member">
+            <img src="https://k-isl.com/JP.jpg" alt="Jane Smith">
+            <h2>Dr. Jayanta Pal</h2>
+            <p class="role">Co PI, Assistsnt Professor, Dept of IT, TU</p>
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iste itaque culpa?.</p>
+        </div>
+        <div class="team-member">
+            <img src="https://k-isl.com/SD.jpg" alt="Jane Smith">
+            <h2>Suman Debbarma</h2>
+            <p class="role">JRF, Research Scholar, Dept of IT, TU</p>
+            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate praesentium impedit.</p>
+        </div>
+        <div class="team-member">
+            <img src="https://k-isl.com/RS.jpg" alt="Jane Smith">
+            <h2>Rahul Sutradhar</h2>
+            <p class="role">Project Associate, Research Scholar, Dept of IT, TU</p>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repudiandae iusto consequatur!</p>
+        </div>
+        <div style="width: 93%;" class="team-member">
+            <h3 style="text-decoration: underline;">Interns</h3>
+            <p>
+                Amit Dey, MCA Student, Tripura University
+            </p>
+            <p>
+                Nishu Pallavi, MCA Student, Tripura University
+            </p>
+            <p>
+                Robin Debbarma, B.Tech-CSE Student, NERIST Arunachal Pradesh
+            </p>
+            <p>
+                Mina Nath, B.Tech-CSE Student, NERIST Arunachal Pradesh
+            </p>
+        </div>
+
+    </section>
+    <script>
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.addEventListener('click', () => {
+                alert('You clicked on ' + member.querySelector('h2').textContent);
+            });
+        });
+    </script>
+</body>
+</html>
