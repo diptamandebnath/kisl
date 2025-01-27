@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KISL - Kokborok & Indian Sign Language Repository</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="KISL">
+  <meta property="og:description" content="An Online Repository for Kokborok Words and Indian Sign Language">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Slabo+27px&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #000000;
+      padding: 10px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      color: #2804f3;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style:georgian;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #021a68;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #bb07a3;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    header img {
+      height: 90px;
+      width: auto;
+      border-radius: 6px;
+      margin-right: 20px;
+    }
+
+    header .header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: #000000;
+    }
+
+    #dstTitle {
+      margin-left: auto;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    /* CM Section */
+    #CM_Section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #113d9c, #0c72e6, #8016e4);
+      color: #fff;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    #CM_Section img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      border: 2px solid #c26ace;
+    }
+
+    #CM_Section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    #CM_Section div {
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Slabo 27px", serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0px;
+      color: #000000;
+    }
+
+    .boxed {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      line-height: 1.8;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      height: auto;
+      width: 100%;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .slider-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+
+    .slider-buttons button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .slider-dots button {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: none;
+      background: #ccc;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .slider-dots button.active {
+      background: rgb(2, 108, 173);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#about-project">About Project</a></li>
+      <li><a href="#team-member">Team Member</a></li>
+      <li><a href="#news-updates">News/Updates</a></li>
+      <li><a href="#reference-website">Reference Website</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img id="TULOGO" src="TU.jpg" alt="TU Logo">
+    <div class="header-content">
+      <h1>Department of Information Technology</h1>
+      <h2>Tripura University</h2>
+      <p>Suryamaninagar, West Tripura, 799022</p>
+    </div>
+    <div id="dstTitle">Department of Science & Technology</div>
+    <img id="DSTLOGO" src="dstlogo.png" alt="DST Logo">
+  </header>
+
+  <div id="CM_Section">
+    <img src="CM.jpg" alt="Chief Minister">
+    <div>
+      <h2>An Online Repository for Kokborok Words and Indian Sign Language</h2>
+      <p>Inaugurated By</p>
+      <p style="font-size: 1.2rem; font-weight: bold;">Prof. (Dr.) Manik Saha</p>
+      <p>Hon'ble Chief Minister of Tripura</p>
+      <p style="margin-top: 10px; font-size: 1rem;">
+        <strong>NGIN</strong> (Next Generation Innovation Network), <strong>TRIPURA UNIVERSITY</strong> (A Central University) by <strong>DIT</strong> (Directorate of IT), Govt. of Tripura<br>
+        DST vide File No. CRG/2023/002076
+      </p>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="https://cbpssubscriber.mygov.in/assets/uploads/juGajmc1gOVBUtt5?9" alt="1">
+      <img src="https://static.mygov.in/innovateindia/images/ppc2025_banner.jpg" alt="Slide 2">
+      <img src="https://static.mygov.in/innovateindia/images/ppc2025_ew_banner.jpg" alt="Slide 3">
+    </div>
+    <div class="slider-buttons">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+    <div class="slider-dots">
+      <button class="dot"></button>
+      <button class="dot"></button>
+      <button class="dot"></button>
+    </div>
+  </div>
+
+  <h1 id="about-project">About The Project</h1>
+  <p class="boxed">
+    This project serves two primary functions. First, it is designed to aid the people of Tripura and others interested in learning Kokborok by providing an interactive and digital platform. This platform ensures accessibility and convenience, enabling users to learn from the comfort of their homes or during breaks from work.
+    Second, the project aims to support individuals who are hard of hearing by facilitating the learning of Indian Sign Language (ISL) using Kokborok words. This initiative is specifically tailored to help the indigenous people of Tripura bridge the gap between Kokborok and ISL, fostering greater inclusivity and cultural connection.
+  </p>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function updateSlider(index) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? dots.length - 1 : currentIndex - 1;
+      updateSlider(currentIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex === dots.length - 1) ? 0 : currentIndex + 1;
+      updateSlider(currentIndex);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider(currentIndex);
+      });
+    });
+
+    // Initialize the slider
+    updateSlider(currentIndex);
+  </script>
+</body>
+<br>
+<center><footer><i>KISL &copy; All right reserved</i></footer></center>
+</html>
