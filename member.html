@@ -4,30 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Members</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Slabo+27px&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 10px;
+    }
 header {
-    background-color: #0452ac;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+    header img {
+      height: 90px;
+      width: auto;
+      border-radius: 6px;
+      margin-right: 20px;
+    }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
+    header .header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: #000000;
+    }
+    #dstTitle {
+      margin-left: auto;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #000000;
+    }
+    h1 {
+      font-family: "Slabo 27px", serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: -10px;
+      color: #000000;
+    }
 
 .team {
     display: flex;
@@ -38,13 +84,51 @@ header p {
 }
 
 .team-member {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
+    width:250px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
     padding: 20px;
-    transition: transform 0.3s ease;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.team-member::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    z-index: -1;
+    border-radius: 10px;
+    animation: glowing 5s linear infinite;
+}
+.team-member::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+    border-radius: 8px;
+}
+@keyframes glowing {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.team-member-one::before {
+    background: linear-gradient(45deg, red, orange);
+}
+.team-member-two::before {
+    background: linear-gradient(45deg, purple, blue);
+}
+.team-member-three::before {
+    background: linear-gradient(45deg, green, cyan);
 }
 
 .team-member:hover {
@@ -56,17 +140,18 @@ header p {
     border: 3px solid #e97305;
     border-radius: 50%;
     object-fit: cover;
-    height: 265px;
+    height: 230px;
 }
 
-h2 {
+
+/* h2 {
     font-size: 1.6em;
     margin-top: 15px;
-}
+} */
 
 .role {
     font-weight: bold;
-    color: #3498db;
+    color: #fa7b04;
     margin-top: 5px;
 }
 
@@ -82,7 +167,14 @@ nav {
       margin-bottom: 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0332b6;
     }
 
     nav ul {
@@ -98,7 +190,7 @@ nav {
     nav ul li a {
       text-decoration: none;
       color: #021a68;
-      font-weight: 700;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -106,49 +198,56 @@ nav {
       color: #bb07a3;
     }
     
-
 </style>
 </head>
 <body>
+ <header>
+    <img id="TULOGO" src="tu3d.gif" alt="TU Logo">
+    <div class="header-content">
+      <h1>Department of Information Technology</h1>
+      <h2>Tripura University</h2>
+      <p>Suryamaninagar, West Tripura, 799022</p>
+    </div>
+    <div id="dstTitle">Department of Science & Technology</div>
+    <img id="DSTLOGO" src="dst3d.gif" alt="DST Logo">
+    </header>
     <nav>
+        <div class="logo"><i>KISL</i></div>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#learn">Learn</a></li>
-          <li><a href="#about-project">About Project</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="#">About Project</a></li>
           <li><a href="#">Team Member</a></li>
-          <li><a href="#news-updates">News/Updates</a></li>
-          <li><a href="#reference-website">Reference Website</a></li>
+          <li><a href="#">News/Updates</a></li>
+          <li><a href="#">Reference Website</a></li>
         </ul>
       </nav>
-    <header>
-
-        <h1>Meet Our Team</h1>
-        <p>Our dedicated team is committed to driving success through innovation and expertise.</p>
-    </header>
+    <h1>Meet Our Team</h1>
+    <p style="text-align: center;"">Our dedicated team is committed to driving success through innovation and expertise.</p>
     <section class="team">
-        <div class="team-member">
-            <img src="sm.jpg" alt="Swanirbhar Majumder">
+        <div class="team-member team-member-one">
+            <img src="https://diptamandebnath.github.io/kisl/sm.jpg" alt="Swanirbhar Majumder">
             <h2>Prof. Swanirbhar Majumder</h2>
             <p class="role">PI, HOD Dept of IT, TU</p>
-            <p class="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, repellat</p>
+            <!-- <p class="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, repellat</p> -->
         </div>
-        <div class="team-member">
-            <img src="jp.jpg" alt="Jayanta Pal">
+        <div class="team-member team-member-two">
+            <img src="https://diptamandebnath.github.io/kisl/jp.jpg" alt="Jayanta Pal">
             <h2>Dr. Jayanta Pal</h2>
             <p class="role">Co PI, Assistsnt Professor, Dept of IT, TU</p>
-            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iste itaque culpa?.</p>
+            <!-- <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iste itaque culpa?.</p> -->
         </div>
-        <div class="team-member">
-            <img src="sd.png" alt="Suman Debbarma">
+        <div class="team-member team-member-three">
+            <img src="https://diptamandebnath.github.io/kisl/sd.png" alt="Suman Debbarma">
             <h2>Suman Debbarma</h2>
             <p class="role">JRF, Research Scholar, Dept of IT, TU</p>
-            <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate praesentium impedit.</p>
+            <!-- <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate praesentium impedit.</p> -->
         </div>
-        <div class="team-member">
-            <img src="rs.png" alt="Rahul Sutradhar">
+        <div class="team-member team-member-four">
+            <img src="https://diptamandebnath.github.io/kisl/rs.png" alt="Rahul Sutradhar">
             <h2>Rahul Sutradhar</h2>
             <p class="role">Project Associate, Research Scholar, Dept of IT, TU</p>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repudiandae iusto consequatur!</p>
+            <!-- <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repudiandae iusto consequatur!</p> -->
         </div>
         <div style="width: 93%;" class="team-member">
             <h3 style="text-decoration: underline;">Interns</h3>
