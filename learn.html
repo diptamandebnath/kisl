@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KISL::Learn</title>
+  <meta property="og:title" content="KISL">
+  <meta property="og:description" content="An Online Repository for Kokborok Words and Indian Sign Language">
+  <meta property="og:image" content="https://kisl.com/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+27px&display=swap" rel="stylesheet">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="learn.css">
+</head>
+<header>
+  <img id="TULOGO" src="tu3d.gif" alt="TU Logo">
+  <div class="header-content">
+    <h1>Department of Information Technology</h1>
+    <h2>Tripura University</h2>
+    <p>Suryamaninagar, West Tripura, 799022</p>
+  </div>
+  <div id="dstTitle">Department of Science & Technology</div>
+  <img id="DSTLOGO" src="dst3d.gif" alt="DST Logo">
+</header>
+<nav>
+  <div class="logo"><i>KISL</i></div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Learn</a></li>
+    <li><a href="#">About Project</a></li>
+    <li><a href="member.html">Team Member</a></li>
+    <li><a href="#">News/Updates</a></li>
+    <li><a href="#">Reference Website</a></li>
+  </ul>
+</nav>
+<body>
+  <div class="temp_loader" src="Components/navBar.xml"></div>
+  <div class="popup">
+    <div class="mask"></div>
+    <div class="dialog">
+      <div id="popup_message"><noscript>Please Turn on Javascript from your browser settings! This page won't load without it</noscript> <script>document.write("Please wait while the page is loading...");</script> </div>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <h1 style="margin-bottom: 5px;">Welcome to KISL Portal</h1>
+    <p style="margin-bottom: 5px; font-weight: 400; text-align: justify;">
+      Sign Language is a set of hand and facial gestures used to communicated, most often by the hearing and speech impaired. The purpose of the application is to bridge the communication gap between the hearing and deaf communities by providing an intuitive and accessible platform for learning and practicing Indian Sign Language.
+    </p>
+    <datalist style="margin-bottom: 5px;" id="SearchDatalist">
+    </datalist>
+    <div>
+      <form id="SearchForm" align="center">
+        <input required placeholder="" type="search" name="q" list="SearchDatalist"><input type="submit" value="Search" style="margin-left: 20px;">
+      </form>
+    </div>
+    <h1 style="margin-bottom: 10px; margin-top: 10px;">
+      KISL Introduction
+    </h1>
+    <div class="video">
+      <iframe style="border-radius: 12px;" align="center" src="https://drive.google.com/file/d/1vndncSTSP_dKQcFDj768McRvArkFRzgr/preview" width="360" height="550" allowfullscreen></iframe>
+    </div>
+    <div id="IntroText">
+    </div>
+    <h1 style="margin-bottom: 10px; margin-top: 10px;">
+      Explore Kokborok Words
+    </h1>
+    <div hidden>
+      <label for="dict_lang_selector">Explore By</label>
+      <select id="dict_lang_selector">
+        <option selected value="eng">English</option>
+        <option value="kokborok">Kokborok</option>
+        <option value="beng">Bengali</option>
+      </select>
+      Words
+    </div>
+    
+    <div id="ExploreWindow">
+
+    </div>
+    <div id="ExploreWords">
+      
+    </div>
+  </div>
+</body>
+</html>
