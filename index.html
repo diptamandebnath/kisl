@@ -18,7 +18,7 @@
     }
 
     body {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #000000;
@@ -33,7 +33,14 @@
       margin-bottom: 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0332b6;
     }
 
     nav ul {
@@ -62,10 +69,10 @@
       display: flex;
       align-items: center;
       background: #ffffff;
-      padding: 20px;
+      padding: 8px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     header img {
@@ -142,7 +149,7 @@
       font-family: "Slabo 27px", serif;
       font-size: 2rem;
       text-align: center;
-      margin-bottom: 0px;
+      margin-bottom: -10px;
       color: #000000;
     }
 
@@ -210,21 +217,22 @@
       margin: 0 5px;
       border-radius: 50%;
       border: none;
-      background: #ccc;
+      background: #043ba0;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
     .slider-dots button.active {
-      background: rgb(2, 108, 173);
+      background: rgb(146, 3, 212);
     }
   </style>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
+    <div class="logo"><i>KISL</i></div>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#learn">Learn</a></li>
       <li><a href="#about-project">About Project</a></li>
       <li><a href="member.html">Team Member</a></li>
@@ -314,5 +322,5 @@
   </script>
 </body>
 <br>
-<center><footer><i>KISL &copy; All right reserved</i></footer></center>
+<center><footer><i>KISL 2025 &copy; All right reserved</i></footer></center>
 </html>
